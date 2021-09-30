@@ -1,2 +1,2 @@
-# OsInstaller_WinPE
+# Windows OS installer for WinPE
 
