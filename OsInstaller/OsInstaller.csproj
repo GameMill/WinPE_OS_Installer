@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93C9D85D-CC44-4F01-A8BE-CF90E7D0ED29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OsInstaller</RootNamespace>
+    <AssemblyName>OsInstaller</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>\\192.168.0.3\Shop\WWW\ROOT\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>\\192.168.0.3\Shop\WWW\ROOT\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Functions">
+      <HintPath>..\..\cSharp_Helper_Function2\Functions\bin\Debug\Functions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Wim, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7325a91af6f28c40, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Wim.1.2.11\lib\net40\Microsoft.Wim.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\abstractSettings.cs" />
+    <Compile Include="Extra\ShowSystemInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extra\ShowSystemInfo.Designer.cs">
+      <DependentUpon>ShowSystemInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extra\Get Drive Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extra\Get Drive Info.Designer.cs">
+      <DependentUpon>Get Drive Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Settings.cs" />
+    <Compile Include="CustomProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extra\Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extra\Error.Designer.cs">
+      <DependentUpon>Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extra\CreateImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extra\CreateImage.Designer.cs">
+      <DependentUpon>CreateImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extra\SelectOsDrive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extra\SelectOsDrive.Designer.cs">
+      <DependentUpon>SelectOsDrive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallOS\Class1.cs" />
+    <Compile Include="InstallOS\Installer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallOS\Installer.Designer.cs">
+      <DependentUpon>Installer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallOS\SelectHDs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallOS\SelectHDs.Designer.cs">
+      <DependentUpon>SelectHDs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallOS\SelectOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallOS\SelectOS.Designer.cs">
+      <DependentUpon>SelectOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Extra\ShowDrive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extra\ShowDrive.Designer.cs">
+      <DependentUpon>ShowDrive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysCheck.cs" />
+    <Compile Include="Timer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Extra\ShowSystemInfo.resx">
+      <DependentUpon>ShowSystemInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extra\Get Drive Info.resx">
+      <DependentUpon>Get Drive Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extra\Error.resx">
+      <DependentUpon>Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extra\CreateImage.resx">
+      <DependentUpon>CreateImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extra\SelectOsDrive.resx">
+      <DependentUpon>SelectOsDrive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallOS\Installer.resx">
+      <DependentUpon>Installer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallOS\SelectHDs.resx">
+      <DependentUpon>SelectHDs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallOS\SelectOS.resx">
+      <DependentUpon>SelectOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extra\ShowDrive.resx">
+      <DependentUpon>ShowDrive.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
