@@ -27,7 +27,7 @@ namespace FormTest
             Application.DoEvents();
             using (System.Net.WebClient myWebClient = new System.Net.WebClient())
             {
-                var url = ""
+                var url = "";
                 try
                 {
                     url = System.IO.File.ReadAllText("UpdateURL.txt");
