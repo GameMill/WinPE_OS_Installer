@@ -1,8 +1,7 @@
 # Windows OS installer for WinPE
 
-This project is a windows installer for WinPE.
-This will preform a Health check on the Harddrives and Install the Operating System Using BIOS or UEFI boot method
+This project provides a Windows installer built on the WinPE environment.
+It performs comprehensive health checks on system hard drives and facilitates OS installation via either BIOS or UEFI boot methods.
+The installer supports network-based deployment by retrieving the operating system image from a remote Samba server, enabling multiple systems to install Windows simultaneously.
 
-The Operating System can be storn on a remote Samba Server to allow multiple System to install windows based opeating systems.
-
-Supports installing Windows Vista to Windows 11
+Compatible with Windows versions from Vista through Windows 11.
